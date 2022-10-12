@@ -1,5 +1,6 @@
 package ru.mirea.task3;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Circle extends Point{
@@ -8,7 +9,7 @@ public class Circle extends Point{
     public void SetCircle()
     {
         point.SetCoords();
-        System.out.println("Введите радиус");
-        Scanner input = new Scanner(System.in);
+        Random r = new Random();
+        radius = r.nextInt(1, 100);
     }
 }
