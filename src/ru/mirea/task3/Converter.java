@@ -16,31 +16,32 @@ public class Converter {
     }
     public void Convert()
     {
-        System.out.print("Для перевода\nрублей в доллары введите 1\nрублей в евро введите 2\nдля завершения введите 3\n");
+
         Scanner input = new Scanner(System.in);
         int var;
-        var = input.nextInt();
+
         do {
+            System.out.print("Для перевода\nрублей в доллары введите 1\nрублей в евро введите 2\nдля завершения введите 3\n");
+            var = input.nextInt();
             switch (var)
             {
                 case 1:
                 {
                     System.out.print("Введите рубли: ");
                     rubles = input.nextInt();
-                    System.out.print(" = " + rubles*dollars + "$");
+                    System.out.println(" = " + rubles*dollars + "$");
                     break;
                 }
                 case 2:
                 {
                     System.out.print("Введите рубли: ");
                     rubles = input.nextInt();
-                    System.out.print(" = " + rubles*euros + "э");
+                    System.out.println(" = " + rubles*euros + "э");
                     break;
                 }
-                case 0:
-                    return;
+
             }
-        }while(true);
+        }while(var != 3);
 
     }
 }

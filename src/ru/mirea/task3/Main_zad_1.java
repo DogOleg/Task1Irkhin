@@ -7,12 +7,13 @@ import java.util.Scanner;
 class Main_zad_1 {
     public static void main(String[] args)
     {
-        System.out.print("1. Первое задание\n2. Второе задание\n3. Третье задание\n4. Оболочки\n0. Выйти\n");
+
         int a;
         Scanner input = new Scanner(System.in);
 
         do
         {
+            System.out.print("1. Первое задание\n2. Второе задание\n3. Третье задание\n4. Оболочки\n5. Конвертер валют\n0. Выйти\n");
             a = input.nextInt();
             switch (a)
             {
@@ -83,8 +84,14 @@ class Main_zad_1 {
                         String d = Double.toString(doub[i]);
                         System.out.print(d + " ");
                     }
+                    break;
 
                 }
+                case 5:
+                    Converter converter = new Converter();
+                    converter.setCours();
+                    converter.Convert();
+                    break;
             }
         }while (true);
     }
